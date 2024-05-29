@@ -22,6 +22,11 @@ public class GalosphereRegion extends Region {
         super(new ResourceLocation(Galosphere.MODID, "biome_provider"), RegionType.OVERWORLD, 1);
     }
 
+    // NOTE: Added by Galoblender
+    public GalosphereRegion(int weight) {
+        super(new ResourceLocation(Galosphere.MODID, "biome_provider"), RegionType.OVERWORLD, weight);
+    }
+
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         mapper.accept(Pair.of(BiomeReagentHandler.CRYSTAL_CANYONS_PARAMETER, GBiomes.CRYSTAL_CANYONS.getKey()));

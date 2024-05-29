@@ -57,7 +57,8 @@ import net.orcinus.galosphere.util.BannerRendererUtil;
 @Mod.EventBusSubscriber(modid = Galosphere.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MiscEvents {
 
-    @SubscribeEvent
+    // NOTE: Subscription to Event Bus removed by Galoblender
+    //@SubscribeEvent
     public void onParallelDispatched(ParallelDispatchEvent event) {
         event.enqueueWork(() -> {
             try {
